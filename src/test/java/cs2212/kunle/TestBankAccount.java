@@ -15,4 +15,12 @@ package ca.uwo.csd.cs2212.USERNAME;
      Assert.assertEquals(5.0, amount);
   
    }
+   
+   @Test
+   public void testDebitWithInsufficientFunds() {
+     BankAccount account = new BankAccount(10);
+     double amount = account.debit(11);
+     Assert.assertEquals(10.0, amount);
+  
+   }
  } 
